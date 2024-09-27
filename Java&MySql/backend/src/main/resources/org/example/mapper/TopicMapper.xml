@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--动态SQL. id是articlemapper中方法的名字. resultType是传回来的数据的类型. ctrl+alt+space 可以显示IntelliSense -->
+<mapper namespace="org.example.mapper.TopicMapper">
+    <select id="list" resultType="org.example.pojo.Topics">
+        select * from topics
+        <where><!--如果if全都是false的话where可以自动忽略掉create_user前面的“and”*/-->
+            <if test="categoryId!=null">
+                category_id=#{categoryId}
+            </if>
+            <if test="status!=null">
+                and status=#{status}
+            </if>
+            <if test="assignedTo!=null">
+                and assigned_to=#{assignedTo}
+            </if>
+            <if test="createdBy!=null">
+                and created_by=#{createdBy}
+            </if>
+            <if test="batchId!=null">
+                and batch_id=#{batchId}
+            </if>
+            <if test="titleKey!=null">
+                and title LIKE CONCAT('%', #{titleKey}, '%')
+            </if>
+
+        </where><!-- -->
+    </select>
+    <select id="listReview" resultType="org.example.pojo.Topics">
+        select t.*
+        from topics t
+        <where>
+            t.assigned_to =#{assignedTo}
+            and t.status= #{status}
+            and t.batch_id in (
+            select ab.active_batch_id
+            from activebatch ab
+            where NOW() between ab.start_time and ab.end_time
+            )
+            <if test="categoryId!=null">
+                and category_id=#{categoryId}
+            </if>
+            <if test="createdBy!=null">
+                and created_by=#{createdBy}
+            </if>
+            <if test="batchId!=null">
+                and batch_id=#{batchId}
+            </if>
+            <if test="titleKey!=null">
+                and title LIKE CONCAT('%', #{titleKey}, '%')
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/graduation-design
+    username: root
+    password: Zyd.111
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+mybatis:
+  configuration:                        #enable underscore name convert into camel case name.
+    map-underscore-to-camel-case: false  #开启驼峰命名和下划线命名的转换    数据库中的create_time命名是下划线命名，而实体类中是驼峰命名开启这个则会相互转换。

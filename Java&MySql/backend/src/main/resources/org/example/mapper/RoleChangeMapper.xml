@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--动态SQL. id是articlemapper中方法的名字. resultType是传回来的数据的类型. ctrl+alt+space 可以显示IntelliSense -->
+<mapper namespace="org.example.mapper.RoleChangeMapper">
+    <select id="list" resultType="org.example.pojo.RoleChangeRequest">
+        select * from role_change_requests
+        <where><!--如果if全都是false的话where可以自动忽略掉create_user前面的“and”*/-->
+            <if test="status!=null">
+                and status=#{status}
+            </if>
+            <if test="userId!=null">
+                and user_id=#{userId}
+            </if>
+
+        </where><!-- -->
+    </select>
+</mapper>

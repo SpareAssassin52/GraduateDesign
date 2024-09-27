@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--动态SQL. id是articlemapper中方法的名字. resultType是传回来的数据的类型. ctrl+alt+space 可以显示IntelliSense -->
+<mapper namespace="org.example.mapper.UserMapper">
+    <select id="listAll" resultType="org.example.pojo.User">
+        select * from users
+        <where><!--如果if全都是false的话where可以自动忽略掉create_user前面的“and”*/-->
+            <if test="userId!=null">
+                user_id=#{userId}
+            </if>
+            <if test="role!=null">
+                and role=#{role}
+            </if>
+            <if test="userNameKey!=null">
+                and username LIKE CONCAT('%', #{userNameKey}, '%')
+            </if>
+        </where><!-- -->
+    </select>
+</mapper>
