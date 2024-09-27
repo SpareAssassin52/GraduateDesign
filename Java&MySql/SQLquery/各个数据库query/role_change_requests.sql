@@ -1,0 +1,4 @@
+INSERT INTO `role_change_requests` (`request_id`, `user_id`, `current_role`, `requested_role`, `status`, `reason`, `created_at`, `updated_at`) VALUES (1, 10, 'user', 'expert', 'approved', '身份升级了', '2024-04-30 15:09:18', '2024-05-25 14:10:20');
+INSERT INTO `role_change_requests` (`request_id`, `user_id`, `current_role`, `requested_role`, `status`, `reason`, `created_at`, `updated_at`) VALUES (2, 10, 'user', 'expert', 'approved', '身份升级了', '2024-04-30 15:44:55', '2024-05-25 14:10:23');
+INSERT INTO `role_change_requests` (`request_id`, `user_id`, `current_role`, `requested_role`, `status`, `reason`, `created_at`, `updated_at`) VALUES (3, 7, 'expert', 'user', 'approved', '不想当专家了', '2024-05-10 18:47:44', '2024-05-25 14:10:26');
+INSERT INTO `role_change_requests` (`request_id`, `user_id`, `current_role`, `requested_role`, `status`, `reason`, `created_at`, `updated_at`) VALUES (4, 7, 'expert', 'user', 'rejected', '八十个发士大夫', '2024-05-10 18:49:16', '2024-05-13 19:02:39');

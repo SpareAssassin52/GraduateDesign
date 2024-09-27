@@ -1,0 +1,10 @@
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (1, '计算机', '包含了计算机类的科研课题', 6, '2024-04-17 18:05:44', '2024-04-17 18:05:44');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (3, '网工', '网络工程', 6, '2024-04-20 16:50:16', '2024-04-22 17:58:43');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (4, '网络工程', '网络工程类呢', 6, '2024-04-20 16:51:37', '2024-04-20 16:51:37');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (5, '电子', '电子', 6, '2024-04-22 17:59:21', '2024-04-22 17:59:21');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (6, '信息工程', '信息工程', 7, '2024-04-22 18:01:20', '2024-04-22 18:01:20');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (8, 'user111', 'vue界面创建的分类', 10, '2024-05-09 20:55:47', '2024-05-09 20:55:47');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (9, 'user111分类', '分类2', 10, '2024-05-09 20:56:00', '2024-05-09 20:56:04');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (10, '新user111分类', '分别', 10, '2024-05-09 20:56:15', '2024-05-09 20:56:15');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (13, '软件', '软件工程', 7, '2024-05-18 15:00:35', '2024-05-18 15:00:35');
+INSERT INTO `category` (`category_id`, `category_name`, `description`, `created_user`, `created_at`, `updated_at`) VALUES (14, '软件工程', '是软件工程类别下的。。。', 7, '2024-06-16 15:01:12', '2024-06-16 15:01:12');
